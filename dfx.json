@@ -1,14 +1,14 @@
 {
   "canisters": {
-    "lru-cache-backend": {
-      "main": "src/lru-cache-backend/main.mo",
+    "lru_cache_backend": {
+      "main": "src/lru_cache/lib.mo",
       "type": "motoko"
     }
   },
   "defaults": {
     "build": {
       "args": "",
-      "packtool": ""
+      "packtool": "mops sources"
     }
   },
   "output_env_file": ".env",

@@ -1,0 +1,10 @@
+[package]
+name = "lrucache"
+version = "1.0.0"
+description = "A highly efficient Least Recently Used (LRU) Cache implementation"
+repository = "https://github.com/Demali-876/lru-cache"
+keywords = [ "cache", "data", "structure", "optimized", "management" ]
+license = "MIT"
+
+[dependencies]
+base = "0.13.1"
