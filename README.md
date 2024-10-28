@@ -6,11 +6,11 @@ An **LRU Cache** organizes items in the order of their usage, allowing you to ef
 
 ## Importing the LRU Cache Package
 
-To use the `lru-cache` package in your Motoko project, follow these steps:
+To use the `lrucache` package in your Motoko project, follow these steps:
 
 1. **Add the Package:**
 
-   Run the following command to add the `lru-cache` package:
+   Run the following command to add the `lrucache` package:
 
    ```bash
    mops add lru-cache
@@ -20,7 +20,7 @@ To use the `lru-cache` package in your Motoko project, follow these steps:
     Use this line to import the package into your code:
 
     ```motoko
-    import LRU "mo:lru-cache";
+    import LRU "mo:lrucache";
     ```
 
 ## Overview
@@ -64,7 +64,7 @@ This **LRU Cache** implementation utilizes a combination of a `HashMap` and a cu
 ### Example Usage
 
 ```motoko
-import LRU "mo:lru-cache";
+import LRU "mo:lrucache";
 import Text "mo:base/Text";
 
 actor {
