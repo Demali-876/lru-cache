@@ -1,6 +1,6 @@
 [package]
 name = "lrucache"
-version = "1.0.0"
+version = "1.0.2"
 description = "A highly efficient Least Recently Used (LRU) Cache implementation"
 repository = "https://github.com/Demali-876/lru-cache"
 keywords = [ "cache", "data", "structure", "optimized", "management" ]

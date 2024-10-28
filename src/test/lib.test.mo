@@ -26,7 +26,7 @@ actor {
 
     cache.put("recipe4", "Pound Cake");
     //Cache : [Pound Cake,Chocolate Cake, Strawberry Cake]
-    
+
     cache.showCache();
     // [Pound Cake, Chocolate Cake, Strawberry Cake]
   };

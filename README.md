@@ -4,6 +4,25 @@ This repository contains a comprehensive guide to my over engineered implementat
 
 An **LRU Cache** organizes items in the order of their usage, allowing you to efficiently identify which item hasn't been used for the longest amount of time. Imagine a clothes rack, where clothes are always hung on one side. To find the least-recently used item, you look at the item on the other end of the rack.
 
+## Importing the LRU Cache Package
+
+To use the `lru-cache` package in your Motoko project, follow these steps:
+
+1. **Add the Package:**
+
+   Run the following command to add the `lru-cache` package:
+
+   ```bash
+   mops add lru-cache
+   ```
+
+2. **Import the Package:**
+    Use this line to import the package into your code:
+
+    ```motoko
+    import LRU "mo:lru-cache";
+    ```
+
 ## Overview
 
 This **LRU Cache** implementation utilizes a combination of a `HashMap` and a custom `Node` structure **(Doubly Linked List)** to ensure efficient operations. It provides fast access to cached items, automatic eviction of the least recently used items when the cache reaches its defined capacity, and various utility functions for cache management.
@@ -19,7 +38,7 @@ This **LRU Cache** implementation utilizes a combination of a `HashMap` and a cu
 ### Strengths
 
 - **Fast Accesses:** The cache stores items in order from most-recently used to least-recently used, meaning both retrieval and insertion operations are performed in **O(1)** time.
-  
+
 - **Fast Updates:** Each time an item is accessed or added, the cache updates its internal structure (hash map and DoubleLinkedList) in **O(1)** time, making it efficient for frequently accessed data.
 
 ### Weaknesses
@@ -32,7 +51,7 @@ This **LRU Cache** implementation utilizes a combination of a `HashMap` and a cu
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|------------------|-------------|
 | `get(key, ?callback)`| Retrieves a value and optionally modifies it using a callback.| O(1) | O(1) | `?V`|
 | `put(key, value)`| Adds or updates a key-value pair. If the cache is at capacity, it evicts the least recently used item. | O(1) | O(1)| `()` |
-| `evict()`| Kicks out the least recently used item. No second chances here! | O(1) | O(1) | `()`|
+| `evict()`| Removes the least recently used item. | O(1) | O(1) | `()`|
 | `setEvictionCallback(?callback)`| Sets an eviction callback that will be triggered whenever an eviction occurs. | O(1) | O(1) | `()`|
 | `resize(newCap)`| Resizes the cache to a new capacity. It will evict items if necessary.| O(n) | O(1) | `()`|
 | `clear()`| Resets the cache. | O(1) | O(1) | `()`|
@@ -44,9 +63,8 @@ This **LRU Cache** implementation utilizes a combination of a `HashMap` and a cu
 
 ### Example Usage
 
-
 ```motoko
-import LRU "LRU";
+import LRU "mo:lru-cache";
 import Text "mo:base/Text";
 
 actor {
